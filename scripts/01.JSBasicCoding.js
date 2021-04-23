@@ -1,0 +1,1 @@
+document.write("javascript .js file position<br>");
