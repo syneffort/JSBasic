@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // string
+        let name = "Homer Simpson";
+        let name2 = 'Homer Simpson';
+
+        let doubleQuote = 'He is called "Hommy"';
+        let doubleQuote2 = "He is called \"Hommy\"";
+        console.log(doubleQuote);
+        console.log(doubleQuote2);
+
+        let singleQuote = "He is called 'Hommy";
+        let singleQuote2 = 'He is called \'Hommy\'';
+        console.log(singleQuote);
+        console.log(singleQuote2);
+
+        // number
+        let x = 3;
+        let y = 3.14;
+        
+        // undefined
+        let u;
+        console.log(u);
+        let u2 = undefined;
+        console.log(u2);
+
+        // null
+        let n = null;
+        console.log(n);
+
+        // object
+        let person = {};
+        person.firstName = "Homer";
+        person.lastName = "Simpson";
+        person.age = 40;
+        console.log(person);
+
+        let person2 = 
+        {
+            firstName: "Bart",
+            lastName: "Simpson",
+            age: 12
+        };
+        console.log(person2);
+
+        let person3 = {};
+        person3["firstName"] = "Lisa";
+        person3["lastName"] = "Simpson";
+        person3["Age"] = 14;
+        console.log(person3);
+
+        // array
+        let arr1 = ["Hyundai", "Kia", "Volvo"];
+        console.log(arr1[0]);
+        console.log(arr1[1]);
+        console.log(arr1[2]);
+
+        let arr2 = [1,3,5,7,9,11];
+        console.log(arr2[2]);
+
+        let arr3 = ["Samsung", 3, undefined, person2];
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+        console.log(arr3[2]);
+        console.log(arr3[3]);
+
+        let arr4 = [];
+        arr4[0] = 1;
+        arr4[1] = "Renualt";
+        arr4.push("GM");
+        arr4.push(3);
+        arr4.push(3);
+        arr4.push(3);
+        arr4.push(3);
+        console.log(arr4);
+
+        // boolean
+        let isAdult = true;
+        let x2 = 5;
+        let y2 = 7;
+        console.log(x2 > y2);
+
+        // check data type
+        console.log("x2 : " + typeof(x2));
+        console.log("isAdult : " + typeof(isAdult));
+        console.log("name : " + typeof(name));
+        console.log("person2 : " + typeof(person2));
+        console.log("arr3 : " + typeof(arr3));
+
+    </script>
+</body>
+</html>
