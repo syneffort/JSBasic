@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        for (var i = 0; i < 5; i++)
+        {
+            if (i == 3)
+                break;
+
+            console.log("Number : " + i);
+        }
+
+        var nums = [43,23,5,7];
+        for (var i = 0; i < nums.length; i++)
+        {
+            if (i % 2 == 0)
+                continue;
+
+            console.log(nums[i]);
+        }
+
+        for (var idx in nums)
+        {
+            console.log(nums[idx]);
+        }
+
+        for (var num of nums)
+        {
+            console.log(num);
+        }
+
+        var cars = ["Hyundai", "Kia", "Volvo"];
+        for (var car of cars)
+        {
+            console.log(car);
+        }
+
+        // nums.forEach(function()
+        // {
+
+
+        // });
+
+        var person = { firstName: "Hommer", lastName: "Simpson", Age: 42 };
+
+        for (var key in person)
+        {
+            console.log(person[key]);
+        }
+
+        var i = 0;
+        var sum = 0;
+        while (i <= 10)
+        {
+            sum += i;
+            i++;
+        }
+        console.log(sum);
+
+        var i = 0;
+        var sum = 0;
+        do
+        {
+            sum += i;
+            i++;
+        }
+        while (i <= 10)
+        console.log(sum);
+
+    </script>
+</body>
+</html>
