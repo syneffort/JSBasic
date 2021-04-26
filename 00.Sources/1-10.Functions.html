@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var x = 10;
+        var vat = 0.1;
+
+        console.log(CalculateTax(x));
+        
+        function CalculateTax(profit)
+        {
+            var vat = 0.1;
+            var tax = profit * 0.1;
+
+            return tax;
+        }
+        
+        function Calculator(x1, x2, operator)
+        {
+            if (operator == "+")
+                return x1 + x2;
+            else if (operator == "-")
+                return x1 - x2;
+        }
+
+        console.log(Calculator(5, 7, "+"));
+        console.log(Calculator(5, 7, "-")); 
+
+    </script>
+</body>
+</html>
