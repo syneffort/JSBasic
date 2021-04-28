@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length);
+
+        var str = "Please locate where 'locate'";
+        console.log(str.indexOf("locate"));
+        console.log(str.lastIndexOf("locate"));
+
+        console.log(str.search("locate"));
+
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7));
+        console.log(str.slice(7, 13));
+        console.log(str.slice(-12, -6));
+
+        console.log(str.substring(7));
+        console.log(str.substring(7, 13));
+        
+        console.log(str.substr(7, 6));
+
+        var birthday = "970102";
+        console.log("연" + birthday.substr(0, 2));
+        console.log("월" + birthday.substr(2, 2));
+        console.log("일" + birthday.substr(4, 2));
+
+        var birthday = "1997-01-02";
+        console.log("연" + birthday.substring(0, birthday.indexOf("-")));
+
+        var str = "Please visit here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+
+        var str = "Please visit here here here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+
+        var str = "Please visit here here here!";
+        var str2 = str.replace(/here/gi, "there");
+        console.log(str2);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var txt1 = "Hello";
+        var txt2 = "World";
+        console.log(txt1.concat(txt2));
+        console.log(txt1.concat(txt2, txt2, txt2, txt2));
+
+        var str = "                      Hello World         ";
+        console.log(str.trim());
+
+        var str = "5";
+        console.log(str.padStart(4,0));
+
+        var str = "K"
+        console.log(str.padEnd(5,"-"));
+
+        var str = "Hello World";
+        console.log(str.charAt(4));
+        
+        var tags = "Bluetooth,Earphone,Open";
+        for (var str of tags.split(","))
+            console.log(str);
+
+
+    </script>
+</body>
+</html>
