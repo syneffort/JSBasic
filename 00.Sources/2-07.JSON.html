@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // JSON : JavaScript Object Notation
+
+        var data = {
+            "employ": [
+                {"first":"Simpson", "lastName":"Homer"},
+                {"first":"Simpson", "lastName":"Marge"},
+                {"first":"Simpson", "lastName":"Bart"},
+                {"first":"Simpson", "lastName":"Lisa"},
+            ]
+        };
+
+        console.log(data);
+        var jsonString = JSON.stringify(data);
+        console.log(jsonString);
+        var jsonParsed = JSON.parse(jsonString);
+        console.log(jsonParsed);
+
+        if (data == jsonParsed)
+            console.log("true");
+        else
+            console.log("false");
+
+        var shallow = data;
+        if (data == shallow)
+            console.log("true");
+        else
+            console.log("false");
+
+    </script>
+</body>
+</html>
