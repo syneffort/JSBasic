@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <!-- moment.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+
+        // local machine time
+        var d = new Date();
+        console.log(d);
+
+        // 주의 : 1월은 0으로 시작
+        var d = new Date(2021, 4, 30, 08, 30, 24);
+        console.log(d);
+
+        var d = new Date();
+        console.log("year : ", d.getFullYear());
+        console.log("month : ", d.getMonth());
+        console.log("date : ", d.getDate());
+        console.log("day : ", d.getDay());
+        console.log("hour : ", d.getHours());
+        console.log("minute : ", d.getMinutes());
+        console.log("second : ", d.getSeconds());
+
+        // Timezone : 글로벌 서비스 시, GMT(UTC)로 관리, 클라이언트에서 보정
+        console.log("timezone : ", d.getTimezoneOffset());
+
+        console.log("utc year : ", d.getUTCFullYear());
+        console.log("utc month : ", d.getUTCMonth());
+        console.log("utc date : ", d.getUTCDate());
+        console.log("utc day : ", d.getUTCDay());
+        console.log("utc hour : ", d.getUTCHours());
+        console.log("utc minute : ", d.getUTCMinutes());
+        console.log("utc second : ", d.getUTCSeconds());
+
+        console.log("moment.js : " + moment().format("YYYY-MM-DD"));
+        console.log("moment.js add : " + moment().add(7, "hours").format("YYYY-MM-DD"));
+        console.log("moment.js subtract : " + moment().subtract(7, "days").format("YYYY-MM-DD"));
+
+    </script>
+</body>
+</html>
