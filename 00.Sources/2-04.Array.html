@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        
+        var fruits = ["Banana", "Orange", "Apple"];
+        console.log(fruits);
+        console.log(fruits.toString());
+
+        // join, push
+        console.log(fruits.join(" and "));
+        var arr = [];
+        arr.push("Banana");
+        arr.push("Orange");
+        arr.push("Apple");
+        
+        document.getElementById("div1").innerHTML = arr.join("<br>");
+
+        // pop
+        console.log(arr.pop());
+        console.log(arr);
+
+        // shift
+        var arr = ["Banana", "Orange", "Apple"];
+        var str = arr.shift();
+        console.log(str);
+        console.log(arr);
+
+        // unshift
+        var arr = ["Banana", "Orange", "Apple"];
+        arr.unshift("Lemon");
+        console.log(arr);
+
+        // splice ; 시작위치, 삭제카운트, element...
+        console.log(fruits);
+        fruits.splice(1,0,"Lemon","Kiwi");
+        console.log(fruits);
+
+        // concat
+        var males = ["Homer", "Bart"];
+        var females = ["Marge", "Lisa"];
+        var family = males.concat(females);
+        console.log(family);
+
+        // slice
+        var idiots = family.slice(0, 2);
+        console.log(family);
+        console.log(idiots);
+
+        // sort
+        console.log(family.sort());
+        var nums = [40, 100, 70, 21, 99];
+        console.log(nums.sort());
+
+        nums.sort(function(a, b) {
+            if (a > b) {
+                return 1;
+            } else if (a < b) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+        console.log(nums);
+
+        nums.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(nums);
+
+        nums.sort(function(a, b) {
+            return b - a;
+        });
+        console.log(nums);
+
+        var person = [
+            {name: "호머", point:50, from:"Springfield"},
+            {name: "마지", point:80, from:"Springfield"},
+            {name: "바트", point:60, from:"Tokyo"},
+            {name: "리사", point:100, from:"Seoul"},
+        ];
+
+        person.sort(function(a, b) {
+            return a.point > b.point ? 1 : -1
+        });
+        console.log(person);
+
+        // reverse
+        console.log(nums);
+        console.log(nums.reverse());
+
+        // filter
+        var pass = person.filter(function(person) {
+            return person.point > 70;
+        });
+        console.log(pass);
+
+        var springfieldCitizens = person.filter(function(person) {
+            return person.from.toLowerCase() == "springfield";
+        });
+        console.log(springfieldCitizens);
+
+        // reduce
+        // param1 : accumulator
+        // param2 : current value
+        // param3 : index
+        // param4 : whole array
+
+        var arr1 = [1,2,3,4];
+        var sum = 0;
+        for (var x of arr1)
+        {
+            sum += x;
+        }
+        console.log(sum);
+
+        var sum = arr1.reduce(function(a, c) {
+            return a + c;
+        });
+        console.log(sum);
+
+
+        // map
+        var userList = [
+            {firstName: "호머", lastName: "심슨", email: "homer@gamil.com"},
+            {firstName: "마지", lastName: "심슨", email: "marge@gamil.com"},
+            {firstName: "조", lastName: "바이든", email: "biden@gamil.com"},
+            {firstName: "도널드", lastName: "트럼프", email: "trump@gamil.com"},
+        ];
+
+        var userList2 = userList.map(function(user) {
+            return {fullName: user.firstName + " " + user.lastName, userName: user.firstName, lastName: user.lastName, email: user.email}
+        });
+        console.log(userList2);
+
+    </script>
+</body>
+</html>
