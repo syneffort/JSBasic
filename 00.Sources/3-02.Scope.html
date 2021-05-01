@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // scope : 변수 접근성
+
+        function myFunction() {
+            var carName = "SM6";
+            console.log(carName);
+        }
+        myFunction();
+
+        var carName2 = "KIA";
+        function myFunction2() {
+            console.log(carName2);
+        }
+        myFunction2();
+
+        // 변수에 할당된 함수는 호이스팅 불가
+        // myFunction3();
+
+        var myFunction3 = function() {
+            console.log("Hyundai");
+        }
+        myFunction3();
+
+    </script>
+</body>
+</html>
