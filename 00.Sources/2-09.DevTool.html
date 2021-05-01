@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log("log");
+        console.info("info");
+        console.warn("warn");
+        console.error("error");
+
+        var userList = [
+            {firstName: "Homer", lastName: "Simpson", sex: "Male"},
+            {firstName: "Marge", lastName: "Simpson", sex: "Female"},
+            {firstName: "Bart", lastName: "Simpson", sex: "Male"},
+            {firstName: "Lisa", lastName: "Simpson", sex: "Female"},
+        ];
+
+        console.table(userList);
+
+        console.time();
+
+        var p = 0;
+        for (var i = 0; i < 10; i++) {
+            p = Math.pow(i,i);
+        }
+        console.log(p);
+
+        console.timeEnd();
+
+        console.log("This is %cstyle message", "color:yellow;background-color:blue;padding:10px;");
+
+    </script>
+</body>
+</html>
