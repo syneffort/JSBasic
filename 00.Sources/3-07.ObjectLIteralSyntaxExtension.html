@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var firstName = "Homer";
+        var lastName = "Simpson";
+
+        var person = {
+            firstName: firstName,
+            lastName: lastName
+        };
+
+        console.log(person);
+
+        // Object Literal Syntax Extension
+
+        var type = "student";
+        var score = {
+            [type]: "Bart",
+            score: 60
+        };
+
+        score.grade = 9;
+
+        var type2 = "rank";
+        score[type2] = 5;
+
+        console.log(score);
+        console.log(score.student);
+
+
+    </script>
+</body>
+</html>
