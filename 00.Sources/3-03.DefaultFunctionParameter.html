@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function say(message) {
+            console.log(message);
+        }
+
+        say("Hello!");
+        say(); // undefined
+
+        function say2(message) {
+            if (message != undefined) {
+                console.log(message);
+            } else {
+                console.log("no parameter");
+            }
+        }
+
+        say2("Hello");
+        say2();
+
+        function plus(a, b) {
+            console.log(a + b);
+        }
+
+        plus(1, 2);
+        plus();
+
+        function sayDefault(message = "no params") {
+            console.log(message);
+        }
+
+        sayDefault();
+
+        function plusDefault(a=0, b=0) {
+            console.log(a + b);
+        }
+        plusDefault();
+
+    </script>
+</body>
+</html>
