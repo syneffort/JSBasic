@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        async function getData(path) {
+            return (await axios.get(path)).data;
+        }
+
+        async function calculateSum() {
+            var totalAge = 0;
+            var data = await getData("https://9e2b0688-a86b-4795-a909-fd0a7db3550e.mock.pstmn.io/list");
+            for (var person of data) {
+                totalAge += person.age;
+            }
+
+            console.log(totalAge);
+        }
+        
+        calculateSum();
+
+    </script>
+</body>
+</html>
