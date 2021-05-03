@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+
+        var url = "https://9e2b0688-a86b-4795-a909-fd0a7db3550e.mock.pstmn.io/list"
+        // var data = axios.get(url).then(function(response) {
+        //     console.log(response.data);
+        // });
+
+        function getData() {
+            // promise
+
+            return new Promise(function(resolve, reject) {
+                var data = axios.get(url).then(function(response) {
+                    console.log(response.data);
+                    resolve(response.data);
+                });
+            });
+        }
+
+        var totalAge = 0;
+
+        getData().then(function(data) {
+            for (var person of data) {
+            totalAge += person.age;
+            }
+
+            console.log(totalAge);
+        });
+
+        
+
+    </script>
+</body>
+</html>
