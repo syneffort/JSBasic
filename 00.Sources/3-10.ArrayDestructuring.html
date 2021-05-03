@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array Destructuring
+
+        function getScores() {
+            return [70,80,90];
+        }
+
+        var scores = getScores();
+        console.log(scores);
+        console.log(scores[0]);
+        console.log(scores[1]);
+
+        var [x,y,z] = getScores();
+        console.log(x);
+        console.log(y);
+        console.log(z);
+
+        // ex) 위도(latitude), 경도(longitude)
+        function getLocation() {
+            return [123.12, 23.032];
+        }
+
+        var [latitude, longitude] = getLocation();
+        console.log(latitude);
+        console.log(longitude);
+
+
+    </script>
+</body>
+</html>
