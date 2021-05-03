@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Spread Operator : 배열 또는 문자를 펼침
+
+        var arr1 = [4,5,6];
+        var arr2 = [1,2,3];
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        var arr = [1,2,3,...arr1];
+        console.log(arr);
+        console.log([1,2,...arr1,9,10,11]);
+        console.log([...arr2,...arr1]);
+
+        var str = "CD";
+        var alphabet = ["A","B",...str];
+        console.log(alphabet);
+
+    </script>
+</body>
+</html>
