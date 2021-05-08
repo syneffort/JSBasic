@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            consol.log('show log');
+        } catch (err) {
+            console.log(err);
+        }
+
+        var x = "";
+        try {
+            if (x == "") {
+                throw "empty"
+            }
+        }
+        catch (err) {
+            console.log(`x is ${err}`);
+        }
+        finally {
+            console.log('finally activated');
+        }
+    </script>
+</body>
+</html>
