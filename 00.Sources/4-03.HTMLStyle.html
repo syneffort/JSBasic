@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    
+    <style>
+        .border-red {
+            border: 2px dashed red;
+        }
+
+        .border-green {
+            border: 2px solid green;
+        }
+
+        .border-default {
+            border-width: 1px;
+            border-color: blue;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    Text:
+    <br>
+    <input type="text" id="text1" onblur="changeBorder();">
+    <br>
+    Radio(이메일 수신);
+    <br>
+    <label>
+        <input type="radio" name="radio_email_yn" value="Y" onclick="showEamil();">동의
+    </label>
+    <label>
+        <input type="radio" name="radio_email_yn" value="N" checked onclick="hideEmail();">거부
+        <div id="divEmail" style="display: none;">
+            이메일 <input type="text">
+        </div>
+    </label>
+    <br>
+    Select:
+    <br>
+    <select id="select1" onchange="doChange(this);">
+        <option value=""></option>
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <select id="select2" style="display: none;">
+        <option value="">서울</option>
+        <option value="">대전</option>
+        <option value="">대구</option>
+        <option value="">부산</option>
+    </select>
+    <br>
+    <button type="button" onclick="doSave();">Save</button>
+
+    <script>
+        function changeBorder() {
+            var text1 = document.getElementById("text1");
+            if (text1.value.toLowerCase() == "green") {
+                text1.className = "border-green";
+            } else if(text1.value.toLowerCase() == "red") {
+                text1.className = "border-red";
+            } else {
+                text1.className = "border-default"
+            }
+        }
+
+        function showEamil() {
+            document.getElementById("divEmail").style.display = "";
+        }
+
+        function hideEmail() {
+            document.getElementById("divEmail").style.display = "none";
+        }
+
+        function doChange(obj) {
+            if (obj.value == "KO") {
+                document.getElementById("select2").style.display = "";
+            } else {
+                document.getElementById("select2").style.display = "none";
+            }
+        }
+        
+        function doSave() {
+            var text1 = document.getElementById("text1");
+            if (text1.value == "") {
+                text1.className = "border-red";
+                return alert("필수값을 입력하세요.");
+            }
+
+            console.log("저장됨");
+        }
+    </script>
+</body>
+</html>
